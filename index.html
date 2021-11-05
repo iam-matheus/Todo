@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Matheus Mulundu">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Todo app</title>
+
+    <script src="  import { initializeApp } from https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js"></script>
+    <script src="  import { initializeApp } from https://www.gstatic.com/firebasejs/9.2.0/firebase-auth.js"></script>
+    <script src="  import { initializeApp } from https://www.gstatic.com/firebasejs/9.2.0/firebase-database.js"></script>
+    <script src="  import { initializeApp } from https://www.gstatic.com/firebasejs/9.2.0/firebase-storage.js"></script>
+
+</head>
+
+<body>
+
+    <header></header>
+        
+
+        <h1>TO DO <img src="images/sun.svg" class="app-theme dark" alt="Icon to turn on light theme"></h1>
+
+        <div class="new"><span class="circle"></span>  <span class="text" contenteditable>Create new todo..</span>
+            <img src="images/icon-cross" alt="" class="add">
+        </div>
+
+        
+        <div class="lists">
+            <div class="last-row">
+                <span class="items">items left</span>
+                <span class="clear"> Clear Completed</span>
+            </div>
+        </div>
+        
+        <nav class="filter">
+            <ul>
+                <li href="#" class="all current">All</li>
+                <li href="#" class="active">Active</li>
+                <li href="#" class="done">Completed</li>
+            </ul>
+        </nav>
+        
+        <p>Drag and drop to reoder todos.</p>
+
+
+    <footer class="credits">
+        <p class="copyrights">Done by Matheus Mulundu | Copyrights &copy;2021 WAD Assignment </p>
+    </footer>
+
+
+<script src="main.js"></script>
+
+</body>
+
+</html>

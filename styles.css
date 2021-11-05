@@ -1,0 +1,309 @@
+:root{
+    --background: hsl(235, 21%, 11%);
+    --items: hsl(235, 24%, 19%);
+    --font: hsl(234, 39%, 85%);
+    --secondaryFont: hsl(234, 11%, 52%);
+    --thirdFont: hsl(236, 33%, 92%);
+    --fourthFont: hsl(233, 14%, 35%);
+    --margin: 5%;
+    --border: hsl(233, 14%, 35%);
+    --mobileBg: url(images/bg-mobile-dark.jpg);
+    --desktopBg: url(images/bg-desktop-dark.jpg);
+}
+
+
+
+body{
+    font-family: "Josefin Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: var(--background);
+    color: var(--thirdFont)
+}   
+
+header{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    background: var(--desktopBg) no-repeat;
+    width: 100vw;
+    height: 200px;
+}
+
+h1{
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 0.2em;
+    margin: var(--margin);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.text{
+    flex-basis: 80%;
+    word-break: break-word;
+    padding-top: 1%;
+}
+
+[contenteditable] {
+    outline: 0px solid transparent;
+  }
+
+
+.lists, .new, .filter{
+    background-color: var(--items);
+    border-radius: 5px;
+    color: var(--secondaryFont);
+    font-family: "Josefin Sans", sans-serif; 
+    font-size:18px;
+    margin: 1em var(--margin);
+    letter-spacing: -0.25px;
+    line-height: 18px;
+
+}
+.new{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.new > .circle{
+    margin-left: 10px;
+}
+
+.circle {
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: var(--margin);
+    border-radius: 50%;
+    border: thin var(--border) solid;
+}
+
+.filter{
+    font-weight: 700;
+    padding: 1em 0;
+}
+
+.add{
+    transform: (45deg);
+}
+.delete {
+    margin-left: 5%;
+}
+
+.last-row{
+    height: fit-content;
+    justify-content: space-between;
+    color: var(--secondaryFont);
+    font-size: 0.9em;
+    padding: 10px;
+    background-color: var(--items);
+    border-radius: 5px;
+}
+
+.lists > *{
+    display: flex;
+    padding: 10px;
+}
+
+.delete:hover,
+.clear:hover,
+.new:hover,
+.list > .circle:hover,
+.app-theme:hover{
+    cursor: pointer;
+}
+
+.filter > *{
+    margin: 0;
+}
+
+.filter *{
+    text-decoration: none;
+    list-style-type: none;
+    display: inline-block;
+    color: var(--secondaryFont);
+
+}
+
+.filter > *{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.lists{
+    align-items: center;
+    color: var(--font);
+    width: 540px;
+    margin-left: 450px;
+}
+
+
+.strikethrough{
+    text-decoration: line-through;
+    color: var(--fourthFont);
+}
+
+.cursor-text{
+    cursor: text;
+}
+
+.text:focus{
+    color: var(--font);
+}
+
+.flex-basis{
+    flex-basis: 80%;
+    padding-top: 1%;
+}
+
+.padding-border{
+    border-bottom: thin var(--border) solid;
+}
+
+.completed{
+    background: center left 50% url(images/icon-check.svg) no-repeat, 
+    linear-gradient(#57ddff, #c058f3);
+}
+
+p{
+    text-align: center;
+    color: var(--secondaryFont);
+    margin-top: 30px;
+}
+
+.credits >*{
+    color: #ff8300;
+}
+
+p, .section, .new, .filter, .h1, footer{
+    max-width: 650px;
+}
+
+/*Landing page*/
+
+.landing-container{
+    display: flex;
+}
+
+.qoute{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.landing-container .wording{
+    color: #ff8300;
+    width: 50%;
+    margin-left: 1%;
+}
+
+.wording .paragraph{
+    color: #ff8300;
+    margin-left: 5%;
+}
+
+form{
+
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5% 0 0 0;
+    cursor: pointer;
+}
+
+input{
+    padding: 1rem 2rem 1rem 2rem;
+    margin: 1rem 2rem 1rem 2rem;
+}
+
+input:focus{
+    outline: none;
+}
+
+.login-form{
+        position: relative;
+        width: 85%;
+        height: 13%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media querries*/
+@media screen and (min-width: 375px) {
+    header{
+        background: var(--desktopBg) no-repeat;
+        background-size: cover;
+        height: 300px;
+    }  
+}
+
+@media screen and (max-width: 650px) {
+    .new{
+        padding-right: 0.5em;   
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .new{
+        padding-right: 1em;   
+    }
+}
+
+@media screen and (min-width: 700px) {
+    h1, 
+    .new, 
+    main, 
+    p, 
+    footer{
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .filter{
+        margin: 0 10%;
+        padding: 0;
+        flex: 1;
+    }
+    
+}
+
+@media screen and (min-width: 1440px) {
+    h1{
+        margin: 72px auto;
+    }
+    
+}
+
+
+
