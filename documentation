@@ -1,0 +1,16 @@
+Matheus Mulundu 
+St number: 220053324
+WAD Documentation
+
+I had problem of time management, and i figured, it cant happen to one person right? So i amde a todo web app, so that 
+i get to jo my day down, and plan in advance.
+
+The user has great functionallity, abble to perfofm the crud operations with ease.
+CRUD operations:
+    CREATE: the user can create a new to do without any lag, or visual difficulty findin where to tha.
+    READ: With creted todos, the user has a can automatically view them by design, instead of some complicated implemntation.
+    UPDATE: This is available for arrangement. A user can update the view of their todos at any time. Users will drag and drop their todos in the order they wish to arange them. They can also mark off the completed items on the list.
+    DELETE: Users can delete completed todos, and also the items on their list they wish to pursue nomore.
+
+There is a toggle button that querries out and returns the page as in either light mode or dark mode, according 
+to the users preference.

@@ -31,7 +31,8 @@ $.getScript('https://www.gstatic.com/firebasejs/3.2.1/firebase.js', function () 
 
     firebase.auth.Auth.Persistance.LOCAL;
 
-    import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
@@ -45,6 +46,7 @@ $.getScript('https://www.gstatic.com/firebasejs/3.2.1/firebase.js', function () 
         const errorMessage = error.message;
     });
 
+    //Add event listner on login button
     $("#submit-btn").click(function(){
         let email = $("#email").val();
         let password = $("#password").val();
@@ -67,3 +69,6 @@ $.getScript('https://www.gstatic.com/firebasejs/3.2.1/firebase.js', function () 
         }
     })
 })
+
+
+    
